@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>SVG</title>
+	<style>
+		.animate-svg{
+			width: 800px;
+			margin: 200px auto;
+		}
+		.animate-svg svg{
+			stroke-width: 2px;
+			stroke: #003366;
+			width: 100%;
+			height: 100%;
+			stroke-dashoffset: 1000;
+			stroke-dasharray: 1000;
+			animation: svganimation 3s ease-in-out forwards infinite; 
+			/* 
+				ease-in-out:  na entrada e saida;
+				forwards: sempre pra frente
+				infinite:  sempre infinito
+				
+			*/
+		}
+		@keyframes svganimation{
+			0% {
+				stroke-dashoffset: 1000;
+			}
+			
+			50% {
+				stroke-dashoffset: 0;
+			}
+
+			100% {
+				stroke-dashoffset: 0;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="animate-svg">
+		<svg x="0px" y="0px">
+			<path xmlns="http://www.w3.org/2000/svg" fill="none" d="m 83.6,16.4 c -1.2,-1.2 -3.1,-1.2 -4.2,0 L 50,45.8 20.6,16.4 c -1.2,-1.2 -3.1,-1.2 -4.2,0 -1.2,1.2 -1.2,3.1 0,4.2 L 45.8,50 16.4,79.4 c -1.2,1.2 -1.2,3.1 0,4.2 0.6,0.6 1.4,0.9 2.1,0.9 0.7,0 1.5,-0.3 2.1,-0.9 L 50,54.2 79.4,83.6 c 0.6,0.6 1.4,0.9 2.1,0.9 0.7,0 1.5,-0.3 2.1,-0.9 1.2,-1.2 1.2,-3.1 0,-4.2 L 54.2,50 83.6,20.6 c 1.2,-1.2 1.2,-3 0,-4.2 z"/>
+		</svg>
+	</div>
+</body>
+</html>
